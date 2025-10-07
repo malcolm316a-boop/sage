@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Poems</title>
+  <style>
+    /* 🌹 Basic styling */
+    body {
+      font-family: "Georgia", serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff0f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffb6c1;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      background: #ffc0cb;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      color: #c71585;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .poem {
+      background: #fff;
+      border-left: 5px solid #ff69b4;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .poem img {
+      max-width: 80%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    /* 🌹 Gallery styling */
+    #slideshow {
+      position: relative;
+      width: 350px;
+      max-width: 600px;
+      height: 500px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    #slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    #slideshow img.active {
+      opacity: 1;
+    }
+
+    footer {
+      background: #ffb6c1;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>💌 Her My Sage 💌</header>
+
+  <nav>
+    <a href="#poems">Poems</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <main>
+    <section id="poems">
+      <h2>💖 Vitu nimefikiria kuandika 😂 With lots of love btw 💖</h2>
+
+      <div class="poem">
+        <h3> This Brings Back Memories </h3>
+        <p>
+          Darling I don&#39;t say this enough but being with you feels like peace
+          Like the world finally got quiet and all that&#39;s left is you and me ,your kindness and your voice makes me feel like I'm
+          in paradise which i never want to leave
+          Your laugh always enlightens my mood and you always find a way to make me smile
+          I love the way you make me feel so calm and peaceful and your kisses baby, I could stay there forever
+          the softness of your soul wraps around me in a way that feels like home and when i hug you i don't feel like ever
+          letting go
+          i love you so much baby and to be honest baby I've never felt this way and i never want to lose you ,i want you to
+          always be with me by my side and to never ever leave. </br>
+          Lots of love 💕 </br>
+        </p>
+      </div>
+
+      <div class="poem">
+        <h3>Under the Moonlight</h3>
+        <p>
+          Beneath the stars, our souls entwine,<br />
+          Your heartbeat steady next to mine.<br />
+          The moon, our witness, softly beams,<br />
+          As love flows through our endless dreams.
+        </p>
+      </div>
+
+      <div class="poem">
+        <h3>Her Back in her Prime Days</h3>
+        <p>
+          When I say I wish I met you earlier,<br />
+          Ukificha chips ndio tusione 😂,<br />
+          Na hio pata pata yenye ulikuwa unapenda,<br />
+          A timeless promise we have made.
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>🌹 Photo Slideshow 🌹</h2>
+      <div id="slideshow">
+        <img src="1759836610778.jpg" class="active">
+        <img src="1759836610794.jpg">
+        <img src="1759836610812.jpg">
+        <img src="1759836610828.jpg">
+        <img src="1759836610883.jpg">
+        <img src>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p style="text-align:center; max-width:700px; margin:auto;">
+        This website is a collection beautiful times with my wife. ❤️
+        The Cheruiyot&#39;s.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Made by the king himself. Copyright ,,,, hii ni yangu na bibi pekee
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('#slideshow img');
+    let current = 0;
+
+    function showNextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000); // Change every 3 seconds
+  </script>
+</body>
+
+</html>
